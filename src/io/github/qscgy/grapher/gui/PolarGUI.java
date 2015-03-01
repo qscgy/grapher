@@ -1,5 +1,5 @@
 package io.github.qscgy.grapher.gui;
-
+//test
 import java.awt.Color;
 import javax.swing.*;
 import io.github.qscgy.grapher.plotters.*;
