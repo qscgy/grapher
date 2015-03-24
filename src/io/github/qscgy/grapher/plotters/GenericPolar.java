@@ -18,6 +18,8 @@ public class GenericPolar extends JPanel {
 		super.paintComponent(g);
 		g.setColor(color);
 		Point origin=new Point(getWidth()/2,getHeight()/2);
+		
+		//plots lines between points on the function (hacky lerping)
 		Point last=null;
 		for(double t=0;t<=2*Math.PI;t+=(Math.PI/180)){
 			double r=SCALE*getR(t);

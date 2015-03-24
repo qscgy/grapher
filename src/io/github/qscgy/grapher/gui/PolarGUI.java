@@ -9,8 +9,9 @@ public class PolarGUI {
 		//String eq=readEquation(app);
 		//System.out.println(eq);
 		app.setTitle("Polar Graph");
-		GenericPolar gp=new GenericPolar(Color.green);
-		app.add(gp);
+		//GenericPolar gp=new GenericPolar(Color.green);
+		GenericCartesian gc=new GenericCartesian(Color.green);
+		app.add(gc);
 		app.setSize(1000,800);
 		app.setVisible(true);
 	}
