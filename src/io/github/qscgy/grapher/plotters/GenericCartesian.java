@@ -1,5 +1,6 @@
 package io.github.qscgy.grapher.plotters;
 
+import io.github.qscgy.grapher.util.MathEval;
 import io.github.qscgy.grapher.util.Point;
 
 import javax.swing.*;
@@ -8,9 +9,13 @@ import java.awt.*;
 
 public class GenericCartesian extends JPanel {
 	Color color;
+	String exp;
+	MathEval eval=new MathEval();
 	final int ZOOM=100;
-	public GenericCartesian(Color c){
+	
+	public GenericCartesian(Color c, String exp){
 		super();
+		this.exp=exp;
 		color=c;
 		setBackground(Color.black);
 	}
@@ -31,6 +36,6 @@ public class GenericCartesian extends JPanel {
 	}
 	
 	public double getY(double x){
-		return x;
+		return eval.evaluate(exp);	//TODO add function to substitute in value of x
 	}
 }
